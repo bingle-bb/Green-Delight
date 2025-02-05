@@ -7,7 +7,7 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-/* General Styles */
+
 body {
   font-family: Poppins, sans-serif;
   margin: 0;
@@ -21,38 +21,41 @@ body {
 
 /* Section Layout */
 
-.hero {
+.header {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   min-height: 80vh;
   width: 100%;
-  min-height: 80vh; /* Adjust the height */
+  min-height: 80vh;
   background: linear-gradient(to bottom, #9dc599c4, #92c3661f);
   flex-wrap: wrap;
-  padding: 30px 10px;
+  padding: 30px 20px;
 }
 
 /* Left Content */
 .content {
   flex: 1;
-  padding-right: 50px; /* Increase spacing */
+  padding-right: 50px;
+  margin: 20px;
 }
 
 .content h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  padding-bottom: 15px;
   color: #2f3b1c;
 }
 
 .content p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #4f5d2f;
 }
 
 /* Button */
 .btn {
   display: inline-block;
+  margin-top: 20px;
   padding: 12px 20px;
   background: #8b6f4d;
   color: white;
@@ -60,14 +63,20 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+.btn:hover {
+  background: #92ce80;
+  color: #2f3b1c;
+  transition: background 0.3s ease-in-out;
+}
 
 /* Right Image */
 .image img {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  margin-right: 100px;
 }
 
 /* Category Buttons */
@@ -83,6 +92,7 @@ body {
   background: #8b6f4d;
   color: white;
   padding: 10px 15px;
+  margin-left: -50px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -90,4 +100,9 @@ body {
 
 .category i {
   margin-right: 8px;
+}
+.category:hover {
+  background: #92ce80;
+  color: #2f3b1c;
+  transition: background 0.3s ease-in-out;
 }
