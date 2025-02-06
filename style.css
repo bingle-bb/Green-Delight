@@ -14,9 +14,52 @@ body {
   padding: 0;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack elements vertically */
+  background: linear-gradient(to bottom, #9dc599c4, #92c3661f);
+}
+
+/* nav section */
+nav {
+  width: 100%;
+  position: fixed; /* Keeps it fixed at the top */
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  padding: 20px 50px;
+
+  z-index: 1000; /* Ensures it stays above other content */
+}
+
+.devo {
+  color: #440a0ae5;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffe76dce;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #9dc599;
 }
 
 /* Section Layout */
@@ -32,6 +75,9 @@ body {
   background: linear-gradient(to bottom, #9dc599c4, #92c3661f);
   flex-wrap: wrap;
   padding: 30px 20px;
+  .header {
+    margin-top: 80px; /* Adjust based on nav height */
+  }
 }
 
 /* Left Content */
