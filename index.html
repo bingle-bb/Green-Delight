@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Delight</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <link
       rel="shortcut icon"
       href="images/fruit-salad.png"
       type="image/x-icon"
     />
-    <title>Green Delight</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600&display=swap"
@@ -22,42 +23,50 @@
     ></script>
   </head>
   <body>
-    <nav>
-      <div class="logo"><span class="devo">Green</span>Delight</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+    
+<!-- Navigation Bar -->
+<nav>
+  <a href="index.html" class="logo"><span class="devo">Green</span>Delight</a>
+
+  <ul class="nav-links">
+    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Review</a></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link" href="#">Menu</a>
+      <ul class="dropdown-menu">
+        <option><a href="#">Fruit Salads</a></option>
+        <option><a href="#">Bean Salads</a></option>
+        <option><a href="#">Pasta Salads</a></option>
+        <option><a href="#">Grain Salads</a></option>
       </ul>
-    </nav>
-    <section class="header">
+    </li>
+    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+  </ul>
+<div class="cart-icon">Cart<i class="fa-solid fa-cart-shopping "></i> </div>
+</nav>
+
+<section class="header">
       <div class="content">
-        <h1>Fresh, Flavorful, and 100% Vegetarian!</h1>
+        <h1>Fresh, Flavorful, and 100% Vegetarian!</h 1>
         <p>
           Enjoy fresh vegetarian salads with crisp greens, wholesome grains, and
           vibrant veggies. From garden classics to hearty quinoa bowls, there’s
           a flavor for everyone!
         </p>
-        <a href="#" class="btn">View Menu</a>
+        <div class="price">
+          <span class="current-price">$15.00</span>
+          <span class="old-price">$25.00</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#" class="btn buy-now">Buy Now</a>
+          <a href="#" class="btn see-menu">See Menu</a>
+        </div>
+      </div>
       </div>
       <div class="image">
-        <img src="images/fruit-salad.png"Fresh Vegetarian Salad" />
-      </div>
-      <div class="buttons">
-        <a href="#" class="category"
-          ><i class="fas fa-seedling"></i> Fruit Salads</a
-        >
-        <a href="#" class="category"
-          ><i class="fas fa-seedling"></i> Bean Salads</a
-        >
-        <a href="#" class="category"
-          ><i class="fas fa-seedling"></i> Pasta Salads</a
-        >
-        <a href="#" class="category"
-          ><i class="fas fa-seedling"></i> Grain Salads</a
-        >
-      </div>
-    </section>
-  </body>
+       <img src="images/fruit-salad.png" alt="Fresh Vegetarian Salad" />
+</div>
+  </section>
+
+   </body>
 </html>
