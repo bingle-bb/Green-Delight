@@ -40,7 +40,7 @@ nav {
   font-weight: bold;
   color: #8b6f4d;
   text-decoration: none;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .logo .devo {
@@ -53,25 +53,27 @@ nav {
   gap: 24px;
   position: relative;
   list-style: none;
+  text-align: center;
 }
+
 .nav-links .nav-item {
   position: relative;
 }
+
 .nav-link {
   text-decoration: none;
-
   font-weight: 500;
   padding: 8px 0;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #3c4b25ec;
+  color: #3c4b25d0;
   font-size: 18px;
 }
 
 .nav-links a:hover {
-  border-bottom: 2px solid #3c4b257e;
+  color: #3c4b25;
 }
 
 /* Dropdown styles */
@@ -138,97 +140,116 @@ nav {
 
 /* Section Layout */
 
-.header {
+.promo-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 80vh;
-  width: 100%;
-  min-height: 80vh;
-
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 30px 20px;
-  margin-top: -10px; /* Adjust based on nav height */
+  padding: 30px 50px;
+  min-height: 80vh;
 }
 
-/* Left Content */
-.content {
+.promo-text {
   flex: 1;
-  padding-right: 50px;
-  margin: 20px;
+  min-width: 300px;
+  max-width: 600px;
 }
 
-.content h1 {
-  font-size: 2.5rem;
-  padding-bottom: 15px;
-  color: #2f3b1c;
+.subheading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #6d8a59;
+  margin-bottom: 10px;
 }
 
-.content p {
-  font-size: 1.2rem;
-  color: #4f5d2f;
-}
-.price {
-  margin-top: 10px;
-}
-
-.current-price {
-  font-size: 22px;
+.heading {
+  font-size: 2.8rem;
   font-weight: bold;
-  color: #ffcc00;
+  color: #2f3b1c;
+  margin-bottom: 10px;
 }
 
-.old-price {
-  font-size: 18px;
-  text-decoration: line-through;
-  color: red;
-  margin-left: 10px;
+.heading span {
+  color: #92ce80;
 }
 
-.hero-buttons {
+.tagline {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #4f5d2f;
+  margin-top: 15px;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #4f5d2f;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.buttons {
   margin-top: 20px;
 }
 
 .btn {
   text-decoration: none;
   padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
 }
 
 .buy-now {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: #8b6f4d;
+  background-color: #8b6f4d;
   color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.buy-now:hover {
-  background: #92ce80;
-  color: #2f3b1c;
-  transition: background 0.3s ease-in-out;
-}
-.see-menu {
-  background: transparent;
-  border: 1px solid #8b6f4d;
-  color: white;
-}
-.see-menu:hover {
-  background: #92ce80;
-  color: #2f3b1c;
-  transition: background 0.3s ease-in-out;
 }
 
-/* Right Image */
+.buy-now:hover {
+  background-color: #92ce80;
+  color: #2f3b1c;
+  transition: 0.3s ease;
+}
+
+.see-menu {
+  background-color: #92ce80;
+  color: #2f3b1c;
+}
+
+.see-menu:hover {
+  background-color: #8b6f4d;
+  color: white;
+  transition: 0.3s ease;
+}
+
 .image img {
   width: 350px;
   height: 350px;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
   margin-right: 100px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .promo-text {
+    max-width: 100%;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+
+  .image img {
+    margin: 0 auto;
+  }
 }
