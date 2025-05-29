@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rating System</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #e1f0d1;
+        font-family: Arial, sans-serif;
+        color: #1f2b2e;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 40px;
+      }
+
+      .rating-category {
+        display: inline-block;
+        margin: 0 30px;
+      }
+
+      .category-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .stars {
+        display: flex;
+        justify-content: center;
+      }
+
+      .star {
+        font-size: 30px;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      .star.selected {
+        color: orange;
+      }
+
+      footer {
+        margin-top: 60px;
+        font-size: 0.9rem;
+        color: #2c3e3f;
+      }
+
+      .social-icons i {
+        margin: 0 10px;
+        font-size: 20px;
+        color: #2c3e3f;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      Help us make Green Delight even better! Rate your experience with us.
+    </h2>
+
+    <div class="rating-category" data-category="food">
+      <div class="category-title">Food</div>
+      <div class="stars"></div>
+    </div>
+
+    <div class="rating-category" data-category="service">
+      <div class="category-title">Service</div>
+      <div class="stars"></div>
+    </div>
+
+    <div class="rating-category" data-category="budget">
+      <div class="category-title">Budget-Friendly</div>
+      <div class="stars"></div>
+    </div>
+
+    <footer>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-threads"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+      <p>© 2025 Green Delight. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const categories = document.querySelectorAll(".rating-category");
+
+      categories.forEach((category) => {
+        const starContainer = category.querySelector(".stars");
+        for (let i = 1; i <= 5; i++) {
+          const star = document.createElement("i");
+          star.classList.add("fa-star", "fa-solid", "star");
+          star.dataset.value = i;
+
+          star.addEventListener("click", () => {
+            const allStars = starContainer.querySelectorAll(".star");
+            allStars.forEach((s) => {
+              s.classList.toggle(
+                "selected",
+                s.dataset.value <= star.dataset.value
+              );
+            });
+          });
+
+          starContainer.appendChild(star);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -19,8 +19,9 @@ body {
 }
 
 /* Navigation Bar */
-
 nav {
+  top: 20px;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +48,6 @@ nav {
   color: #4caf50;
 }
 
-/* Center nav links */
 .nav-links {
   display: flex;
   gap: 24px;
@@ -76,7 +76,6 @@ nav {
   color: #3c4b25;
 }
 
-/* Dropdown styles */
 .dropdown-menu {
   border-radius: 5px;
   display: none;
@@ -170,7 +169,7 @@ nav {
 }
 
 .heading span {
-  color: #92ce80;
+  color: #7ec568;
 }
 
 .tagline {
@@ -183,7 +182,7 @@ nav {
 .description {
   font-weight: 500;
   font-size: 1.1rem;
-  color: #4f5d2f;
+  color: #6d8a59;
   margin-top: 10px;
   line-height: 1.6;
 }
@@ -252,4 +251,215 @@ nav {
   .image img {
     margin: 0 auto;
   }
+}
+
+.topMenu-container {
+  align-items: center;
+  padding: 30px 50px;
+  height: 100vh;
+  width: 100%;
+}
+
+.topheader-text {
+  margin-bottom: 100px;
+}
+
+.topHeading {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #5b7947;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #6d8a59;
+  margin: 5px 0 0;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 250px;
+  height: 370px;
+  position: relative;
+  padding-top: 100px;
+  overflow: visible;
+  transition: transform 0.2s ease;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rating {
+  font-size: 1.2rem;
+  color: #f5a623;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #5b7947;
+  text-align: center;
+}
+
+.description2 {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  color: #6d8a59;
+  font-weight: 500;
+  text-align: center;
+}
+
+.price-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: auto;
+  font-weight: bold;
+  color: #5b7947;
+}
+
+.add-to-cart {
+  background-color: #8b6f4dda;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.add-to-cart:hover {
+  background-color: #8b6f4d;
+}
+
+/* Review Section */
+.testimonials {
+  margin: 25px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #1c1c1c;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background-color: #fefefc;
+  border: 2px solid #606c38;
+  border-radius: 16px;
+  width: 250px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.testimonial-card p {
+  color: #4f4f4f;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-info span {
+  font-weight: 500;
+  color: #6b4f1d;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.rating-category {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.category-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.star {
+  color: #ffeaa7; /* soft yellow */
+}
+
+.star.selected {
+  color: orange;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #2c3e3f;
+}
+
+.social-icons i {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #2c3e3f;
 }
