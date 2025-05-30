@@ -19,21 +19,19 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-
-    <script
-      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!-- nav -->
     <nav>
       <a href="index.html" class="logo"
-        ><span class="devo">Green</span>Delight</a
-      >
+        ><span class="devo">Green</span>Delight
+      </a>
 
       <ul class="nav-links">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
         <li class="nav-item"><a class="nav-link" href="#review">Review</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#">Menu</a>
@@ -46,7 +44,16 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
       </ul>
-      <div class="cart-icon">Cart<i class="fa-solid fa-cart-shopping"></i></div>
+
+      <div class="icon-wrapper">
+        <a href="form.html" class="user-icon">
+          <i class="fa-solid fa-user"></i>
+        </a>
+
+        <a href="cart.html" class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
     </nav>
 
     <!-- header section -->
@@ -134,7 +141,7 @@
           </p>
           <div class="user-info">
             <img src="../images/dory.jpg" alt="Dory" />
-            <span>Dory</span>
+            <span">Dory</span>
           </div>
         </div>
 
@@ -191,15 +198,46 @@
       </div>
     </section>
 
+  <!-- contact-us section  -->
+    <section id="contact-us">
+      <h2>Contact Us</h2>
+      <p>
+        We'd love to hear from you! Reach out to us with any questions,
+        feedback, or special requests.
+      </p>
+
+      <form action="">
+        <div>
+          <label for="">Your Name</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <div>
+          <label for="">Your Email</label>
+          <input type="email" class="form-control" />
+        </div>
+
+        <div>
+          <label for="">Your Message</label>
+          <textarea name="textarea" class="form-control"></textarea>
+        </div>
+        <input type="submit" value="Send Messgae" class="btn-send" />
+      </form>
+    </section>
+
+    <!-- footer -->
     <footer>
       <div class="social-icons">
         <i class="fab fa-facebook"></i>
         <i class="fab fa-threads"></i>
         <i class="fab fa-youtube"></i>
       </div>
-      <p>© 2025 Green Delight. All rights reserved.</p>
+      <p>&copy; 2025 Green Delight. All rights reserved.</p>
     </footer>
 
+    <!-- script src -->
+    <script src="../js/toggle.js"></script>
+    <script src="../js/menuFetch.js"></script>
     <script src="../js/ratingStar.js"></script>
   </body>
 </html>

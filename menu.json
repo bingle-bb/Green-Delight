@@ -1,0 +1,42 @@
+{
+  "fruits": [
+    { "id": "f1", "name": "Mango Salad", "price": 4.99 },
+    { "id": "f2", "name": "Avocado Mix", "price": 5.49 },
+    { "id": "f3", "name": "Tropical Bowl", "price": 6.29 },
+    { "id": "f4", "name": "Citrus Splash", "price": 5.99 },
+    { "id": "f5", "name": "Berry Mix", "price": 4.79 },
+    { "id": "f6", "name": "Apple Walnut Crunch", "price": 5.59 }
+  ],
+  "bean": [
+    { "id": "b1", "name": "Chickpea Delight", "price": 4.49 },
+    { "id": "b2", "name": "Black Bean Bowl", "price": 5.29 },
+    { "id": "b3", "name": "Lentil & Veg", "price": 6.49 },
+    { "id": "b4", "name": "Three Bean Mix", "price": 5.79 },
+    { "id": "b5", "name": "Spicy Bean Salad", "price": 4.99 },
+    { "id": "b6", "name": "Bean Sprout Toss", "price": 5.19 }
+  ],
+  "pasta": [
+    { "id": "p1", "name": "Zoodle Garden", "price": 5.99 },
+    { "id": "p2", "name": "Whole Wheat Pasta", "price": 6.49 },
+    { "id": "p3", "name": "Pesto Penne", "price": 5.79 },
+    { "id": "p4", "name": "Rainbow Pasta", "price": 6.29 },
+    { "id": "p5", "name": "Creamy Vegan Shells", "price": 6.99 },
+    { "id": "p6", "name": "Tomato Basil Twirls", "price": 5.89 }
+  ],
+  "grain": [
+    { "id": "g1", "name": "Quinoa Bowl", "price": 6.29 },
+    { "id": "g2", "name": "Brown Rice Medley", "price": 5.49 },
+    { "id": "g3", "name": "Barley Veg Mix", "price": 6.59 },
+    { "id": "g4", "name": "Couscous Garden", "price": 5.99 },
+    { "id": "g5", "name": "Wild Rice Fusion", "price": 6.49 },
+    { "id": "g6", "name": "Farro Fiesta", "price": 6.29 }
+  ],
+  "salads": [
+    { "id": "s1", "name": "Greek Vegan Salad", "price": 5.99 },
+    { "id": "s2", "name": "Classic Garden", "price": 4.99 },
+    { "id": "s3", "name": "Spinach & Apple", "price": 5.59 },
+    { "id": "s4", "name": "Kale & Beet", "price": 6.19 },
+    { "id": "s5", "name": "Cucumber Dill", "price": 4.79 },
+    { "id": "s6", "name": "Rainbow Slaw", "price": 5.39 }
+  ]
+}
