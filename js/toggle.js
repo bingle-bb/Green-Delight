@@ -1,11 +1,8 @@
-{
-  /* <script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
+const toggle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".nav-links");
+const icons = document.getElementById("icon-wrapper");
 
-  hamburger.addEventListener("click", () => {
-    navLinks.style.display =
-      navLinks.style.display === "flex" ? "none" : "flex";
-  });
-</script> */
-}
+toggle.addEventListener("click", () => {
+  links.classList.toggle("show");
+  icons.classList.toggle("show-icons"); // ✅ makes icons appear
+});
