@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Navigation Bar */
+      .mainNav {
+        top: 20px;
+        position: sticky;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #9dc5991a;
+        box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+        backdrop-filter: blur(10px);
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        border-radius: 50px;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #8b6f4d;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      .logo .devo {
+        color: #4caf50;
+      }
+
+      .mainNav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        list-style: none;
+        position: relative;
+        flex-grow: 1;
+        margin: 0; /* REMOVE margin-right */
+        padding: 0;
+      }
+
+      .mainNav-links .nav-items {
+        position: relative;
+      }
+
+      .mainNavLink {
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 0;
+      }
+
+      .mainNav-links a {
+        text-decoration: none;
+        color: #3c4b25d0;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .mainNav-links a:hover {
+        color: #3c4b25;
+      }
+
+      /* .user-icon and .cart-icon */
+      #icon-wrapper {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+      }
+
+      .user-icon {
+        display: flex;
+        align-items: center;
+        color: #8b6f4dec;
+        padding: 5px 10px;
+        font-size: 20px;
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none;
+        margin-right: -5px;
+        font-size: 20px;
+      }
+
+      .cart-icon {
+        display: flex;
+        align-items: center;
+        color: #8b6f4dec;
+        padding: 5px 10px;
+        font-size: 20px;
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none;
+        margin: 0;
+        font-size: 20px;
+      }
+      .user-icon:hover,
+      .cart-icon:hover {
+        color: #996d38;
+      }
+
+      .mainNav-links,
+      .icon-wrapper {
+        transition: all 0.3s ease;
+      }
+
+      /* Hide toggle by default, show on small screens */
+      .mainNav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #3c4b25;
+        cursor: pointer;
+        margin-right: 20px;
+      }
+
+      /* responsive nav*/
+      @media (max-width: 768px) {
+        .mainNav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1px 5px;
+          gap: 0;
+          border-radius: 20px;
+        }
+
+        .mainNav-header {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px 10px;
+          gap: 10px;
+        }
+
+        .logo {
+          font-size: 20px;
+          line-height: 1;
+        }
+
+        .logo .devo {
+          display: block;
+          font-size: 20px;
+        }
+
+        .mainNav-toggle {
+          display: block;
+          font-size: 24px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+        .mainNav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          gap: 5px;
+          margin-top: 10px;
+        }
+
+        .mainNav-links.show {
+          display: flex;
+        }
+
+        #icon-wrapper {
+          display: none;
+          width: 100%;
+          justify-content: center;
+          margin-top: 10px;
+          gap: 15px;
+        }
+
+        #icon-wrapper.show-icons {
+          display: flex;
+          align-items: center;
+        }
+        /* remove display: none from .user-icon and .cart-icon */
+        .user-icon,
+        .cart-icon {
+          padding: 5px 0;
+          font-size: 20px;
+          display: flex; /* ensure they show properly when wrapper is shown */
+          align-items: center;
+        }
+
+        /* when toggled */
+        .icon-wrapper.show-icons {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="mainNav sticky-top">
+      <div class="mainNav-header">
+        <a href="index.html" class="logo">
+          <span class="devo">Green</span>Delight
+        </a>
+        <!-- Hamburger Button -->
+        <button class="mainNav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <ul class="mainNav-links">
+        <li class="mainNav-items">
+          <a class="mainNavLink" href="index.html">Home</a>
+        </li>
+        <li class="mainNav-items">
+          <a class="mainNavLink" href="#review">Review</a>
+        </li>
+        <li class="mainNav-items">
+          <a class="mainNavLink" href="menu.html">Menu</a>
+        </li>
+        <li class="mainNav-items">
+          <a class="mainNavLink" href="#contact-us">Contact</a>
+        </li>
+      </ul>
+
+      <div id="icon-wrapper">
+        <a href="form.html" class="user-icon"
+          ><i class="fa-solid fa-user"></i
+        ></a>
+        <a href="cart.html" class="cart-icon"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
+      </div>
+    </nav>
+    <!-- script src -->
+    <script src="../js/toggle.js"></script>
+  </body>
+</html>

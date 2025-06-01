@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Delight | Menu</title>
+    <link
+      rel="shortcut icon"
+      href="images/fruit-salad.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css">
+   <style>
+    .fancyCard {
+  background: linear-gradient(145deg, #f0f8ff, #ffffff);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 260px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.fancyCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.fancyCard img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.cardRating {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ffedaf;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #a96f00;
+  font-weight: 500;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.priceAdd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceTag {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.plusBtn {
+  background: #d6dc72;
+  border: none;
+  padding: 6px 12px;
+  font-size: 18px;
+  color: #000;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.plusBtn:hover {
+  background: #c8cf58;
+  cursor: pointer;
+}
+
+   </style>
+  </head>
+  <body>
+    <!-- nav -->
+    <div id="nav-container"></div>
+
+    <!-- header section -->
+    <section id="header"></section>
+
+   <div class="container mt-3">
+  <ul class="nav nav-tabs" id="menuTabs">
+    <li class="nav-item">
+
+      <a class="nav-link active" href="#" data-category="fruits">Fruit Salads</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-category="bean">Bean Salads</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-category="pasta">Pasta Salads</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-category="grain">Grain Salads</a>
+    </li>
+  </ul>
+
+  <div id="menu-items" class="row mt-4"></div>
+</div>
+    </section>
+    <!-- Review section -->
+    <section id="review"></section>
+
+    <!-- contact-us section  -->
+    <section id="contact-us"></section>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+ 
+   <script src="../js/toggle.js"></script> 
+    <script src="../js/review-stars.js"></script>
+    <script src="../js/sectionFetch.js"></script>
+    <script src="../js/menuFetch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS and Function placed after the DOM -->
+<script>
+  const tabs = document.querySelectorAll('#menuTabs .nav-link');
+  const menuItemsContainer = document.getElementById('menu-items');
+  let menuData = {};
+
+  // Fetch JSON once
+  fetch('menu.json')
+    .then(response => response.json())
+    .then(data => {
+      menuData = data;
+      renderItems('fruits'); // Load default tab
+    })
+    .catch(error => {
+      console.error('Error loading menu.json:', error);
+      menuItemsContainer.innerHTML = '<p>Error loading menu data.</p>';
+    });
+
+  // Handle tab clicks
+  tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+      e.preventDefault();
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const category = tab.dataset.category;
+      renderItems(category);
+    });
+  });
+
+  // Place your renderItems function here
+function renderItems(category) {
+  menuItemsContainer.innerHTML = '';
+  if (!menuData[category]) {
+    menuItemsContainer.innerHTML = '<p>No items found.</p>';
+    return;
+  }
+
+  menuData[category].forEach(item => {
+    menuItemsContainer.innerHTML += `
+      <div class="col-md-4 col-sm-6 row d-flex justify-content-center mb-4">
+        <div class="fancyCard">
+          <img src="${item.img}" alt="${item.title}">
+          <div class="cardRating"><i class="fa-solid fa-star"></i> ${item.rating}</div>
+          <div class="cardTitle">${item.title}</div>
+          <div class="cardDesc">${item.description}</div>
+          <div class="priceAdd">
+            <div class="priceTag">$${item.price}</div>
+            <button class="plusBtn">+</button>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+}
+
+</script>
+
+  
+  </body>
+</html>

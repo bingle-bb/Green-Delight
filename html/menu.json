@@ -1,0 +1,202 @@
+{
+  "fruits": [
+    {
+      "id": "f1",
+      "title": "Mango Tango Salad",
+      "description": "Mango, avocado, red pepper, and cilantro with lime dressing.",
+      "price": 10,
+      "rating": 8.5,
+      "img": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "f2",
+      "title": "Avocado Lime Bowl",
+      "description": "Fresh avocado, greens, cherry tomatoes, and tangy lime.",
+      "price": 10.5,
+      "rating": 9.2,
+      "img": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "f3",
+      "title": "Tropical Bliss",
+      "description": "Pineapple, mango, kiwi, and shredded coconut with mint.",
+      "price": 11,
+      "rating": 8.9,
+      "img": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "f4",
+      "title": "Citrus Splash",
+      "description": "Orange, grapefruit, and lemon zest on a bed of spinach.",
+      "price": 9.5,
+      "rating": 8.3,
+      "img": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "f5",
+      "title": "Berry Burst Mix",
+      "description": "Strawberries, blueberries, raspberries, and honey drizzle.",
+      "price": 10,
+      "rating": 9.0,
+      "img": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "f6",
+      "title": "Cucumber Mint Salad",
+      "description": "Cool cucumber slices with mint, lemon, and olive oil.",
+      "price": 9.8,
+      "rating": 8.7,
+      "img": "https://images.unsplash.com/photo-1566843974216-6a5a82e76f27?auto=format&fit=crop&w=300&q=80"
+    }
+  ],
+  "bean": [
+    {
+      "id": "b1",
+      "title": "Chickpea Delight",
+      "description": "Chickpeas, cucumber, onion, and tahini-lime dressing.",
+      "price": 9.5,
+      "rating": 8.8,
+      "img": "https://images.unsplash.com/photo-1543352634-c38c61acbb4b?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "b2",
+      "title": "Black Bean Bowl",
+      "description": "Black beans, corn, avocado, and chili flakes.",
+      "price": 10.2,
+      "rating": 9.0,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "b3",
+      "title": "Lentil & Veg Mix",
+      "description": "Brown lentils with carrots, zucchini, and herbs.",
+      "price": 11,
+      "rating": 9.3,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "b4",
+      "title": "Three Bean Salad",
+      "description": "Kidney, pinto, and black beans with Italian dressing.",
+      "price": 10,
+      "rating": 8.6,
+      "img": "https://images.unsplash.com/photo-1543352634-c38c61acbb4b?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "b5",
+      "title": "Spicy Bean Bites",
+      "description": "Mixed beans, jalapeño, and lemon-chili vinaigrette.",
+      "price": 9.8,
+      "rating": 8.4,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "b6",
+      "title": "Sprout & Bean Toss",
+      "description": "Bean sprouts and mung beans with sesame oil.",
+      "price": 9.7,
+      "rating": 8.5,
+      "img": "https://images.unsplash.com/photo-1543352634-c38c61acbb4b?auto=format&fit=crop&w=300&q=80"
+    }
+  ],
+  "pasta": [
+    {
+      "id": "p1",
+      "title": "Zoodle Garden",
+      "description": "Zucchini noodles with cherry tomatoes and basil pesto.",
+      "price": 10.5,
+      "rating": 9.1,
+      "img": "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "p2",
+      "title": "Whole Wheat Delight",
+      "description": "Whole wheat pasta with spinach and garlic olive oil.",
+      "price": 11,
+      "rating": 9.0,
+      "img": "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "p3",
+      "title": "Pesto Penne",
+      "description": "Penne pasta tossed in homemade basil pesto.",
+      "price": 10.3,
+      "rating": 8.7,
+      "img": "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "p4",
+      "title": "Rainbow Pasta Bowl",
+      "description": "Tri-color pasta with seasonal roasted vegetables.",
+      "price": 11.2,
+      "rating": 9.2,
+      "img": "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "p5",
+      "title": "Vegan Cream Shells",
+      "description": "Shell pasta with creamy vegan cheese sauce.",
+      "price": 11.5,
+      "rating": 9.4,
+      "img": "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "p6",
+      "title": "Tomato Basil Twist",
+      "description": "Fusilli pasta with tomato sauce and fresh basil.",
+      "price": 10.8,
+      "rating": 8.9,
+      "img": "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=300&q=80"
+    }
+  ],
+  "grain": [
+    {
+      "id": "g1",
+      "title": "Quinoa Energy Bowl",
+      "description": "Quinoa, black beans, corn, and avocado lime dressing.",
+      "price": 11.2,
+      "rating": 9.1,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "g2",
+      "title": "Brown Rice Medley",
+      "description": "Brown rice with mixed vegetables and tamari sauce.",
+      "price": 10.4,
+      "rating": 8.6,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "g3",
+      "title": "Barley Veg Mix",
+      "description": "Barley, peas, carrots, and lemon vinaigrette.",
+      "price": 11.3,
+      "rating": 8.8,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "g4",
+      "title": "Couscous Garden",
+      "description": "Couscous with roasted bell peppers and herbs.",
+      "price": 10.9,
+      "rating": 9.0,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "g5",
+      "title": "Wild Rice Fusion",
+      "description": "Wild rice, cranberries, nuts, and citrus dressing.",
+      "price": 11.5,
+      "rating": 9.2,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "g6",
+      "title": "Farro Fiesta Bowl",
+      "description": "Farro, corn, peppers, beans, and cumin-lime sauce.",
+      "price": 11,
+      "rating": 9.1,
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+    }
+  ]
+}
