@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("../html/nav.html")
+  fetch("nav.html")
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("nav-container").outerHTML = data;
