@@ -124,3 +124,18 @@ h2 {
   background: #c8cf58;
   cursor: pointer;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .fancyCard {
+    max-width: 60%;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fancyCard {
+    max-width: 60%;
+    margin: 16px auto;
+    padding: 16px;
+  }
+}
