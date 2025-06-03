@@ -8,3 +8,6 @@ function toggle() {
     icons.classList.toggle("show-icons");
   });
 }
+
+// Call the toggle function after DOM is loaded
+document.addEventListener("DOMContentLoaded", toggle);

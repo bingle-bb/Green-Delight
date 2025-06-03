@@ -2,14 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("nav.html")
     .then((res) => res.text())
     .then((data) => {
-      document.getElementById("nav-container").outerHTML = data;
+      document.getElementById("nav-container").innerHTML = data;
+      toggle(); //  toggle() Call
     });
 
   fetch("header.html")
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("header").innerHTML = data;
-      toggle();
     });
 
   fetch("review.html")

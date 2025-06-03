@@ -7,7 +7,6 @@
   text-transform: uppercase;
   width: fit-content;
   padding: 50px;
-  margin-top: 10px;
 }
 
 h1 {
@@ -24,7 +23,7 @@ h1 {
 
 /* Style for the nav-tabs */
 .nav-tabs {
-  border-bottom: 2px solid #708f5ca6;
+  border-bottom: none;
   justify-content: center;
 }
 
@@ -60,14 +59,14 @@ h1 {
 .fancyCard {
   background: #fefefca8;
   border-radius: 16px;
-  padding: 20px;
+  padding: 1.5rem;
+  margin-left: 60px;
   width: 100%;
   max-width: 260px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
   text-align: center;
   transition: all 0.3s ease-in-out;
   position: relative;
-  margin-left: 75px;
 }
 
 .fancyCard:hover {
@@ -137,15 +136,17 @@ h1 {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .fancyCard {
-    max-width: 90%;
-    margin: 20px auto;
+    width: 95%;
+    margin-left: 65px;
+    margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .fancyCard {
     max-width: 90%;
-    margin: 16px auto;
+    margin: 16px;
+    margin-left: 36px;
     padding: 10px;
   }
 }
