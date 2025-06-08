@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Delight | Home</title>
-    <link
-      rel="shortcut icon"
-      href="images/fruit-salad.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="images/fav-img.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -25,53 +21,11 @@
     <!-- topMenu section -->
     <section class="topMenu-container">
       <div class="topheader-text">
-        <h1 class="topHeading">Top List</h1>
-        <p class="subtitle">Our Mainstay Menu</p>
+        <h1 class="topHeading">Upcoming Menu</h1>
+        <p class="subtitle">On the Menu Soon</p>
       </div>
-
-      <div class="menu">
-        <div class="topCard">
-          <img src="../images/Avocado-Salad.png" alt="Avocado Salad" />
-          <div class="rating"><i class="fa-solid fa-star"></i> 8.1</div>
-          <div class="title">Avocado Salad</div>
-          <div class="description2">
-            A creamy blend of ripe avocado, cherry tomatoes, red onions, and
-            fresh lime juice, offering a rich and refreshing flavor.
-          </div>
-          <div class="price-cart">
-            <div class="price">$12</div>
-            <button class="add-to-cart">+</button>
-          </div>
-        </div>
-
-        <div class="topCard">
-          <img src="../images/Cucumber-salad.png" alt="Cucumber Salad" />
-          <div class="rating"><i class="fa-solid fa-star"></i> 9.2</div>
-          <div class="title">Cucumber Salad</div>
-          <div class="description2">
-            Cool and crisp cucumbers mixed with red onions and a light vinegar
-            dressing, perfect for a refreshing and tangy side.
-          </div>
-          <div class="price-cart">
-            <div class="price">$12</div>
-            <button class="add-to-cart">+</button>
-          </div>
-        </div>
-
-        <div class="topCard">
-          <img src="../images/greek-salad.png" alt="Greek Salad" />
-          <div class="rating"><i class="fa-solid fa-star"></i> 8.5</div>
-          <div class="title">Greek Salad</div>
-          <div class="description2">
-            A vibrant mix of tomatoes, cucumbers, red onions, olives, and feta
-            cheese, all tossed in a classic olive oil and herb dressing.
-          </div>
-          <div class="price-cart">
-            <div class="price">$12</div>
-            <button class="add-to-cart">+</button>
-          </div>
-        </div>
-      </div>
+      <!-- topmenu div -->
+      <div id="menu-items" class="menu"></div>
     </section>
 
     <!-- Review section -->
@@ -83,9 +37,33 @@
     <!-- footer -->
     <div id="footer"></div>
 
+    <!-- scroll -->
+    <div id="scrollBtnContainer"></div>
+
     <!-- script src -->
     <script src="../js/toggle.js"></script>
     <script src="../js/review-stars.js"></script>
     <script src="../js/sectionFetch.js"></script>
+    <script src="../js/iconsToggle.js"></script>
+    <script>
+      fetch("topMenu.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const menuContainer = document.getElementById("menu-items");
+          data.forEach((item) => {
+            const topCard = document.createElement("div");
+            topCard.className = "topCard";
+            topCard.innerHTML = `
+          <img src="${item.image}" alt="${item.title}" />
+          <div class="rating"><i class="fa-solid fa-star" style="opacity: 0.5;"></i></div>
+          <div class="title">${item.title}</div>
+          <div class="description2">${item.description}</div>
+         
+        `;
+            menuContainer.appendChild(topCard);
+          });
+        })
+        .catch((error) => console.error("Error loading menu:", error));
+    </script>
   </body>
 </html>

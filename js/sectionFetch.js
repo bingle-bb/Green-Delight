@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("nav-container").innerHTML = data;
-      toggle(); //  toggle() Call
+      initDropdowns(), toggle(); // Call after nav is injected
     });
 
   fetch("header.html")
@@ -29,5 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("footer").innerHTML = data;
+    });
+
+  fetch("scroll.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("scrollBtnContainer").innerHTML = data;
     });
 });

@@ -3,14 +3,14 @@
     {
       "id": "f1",
       "title": "Mango Tango",
-      "description": "Mango, avocado, red pepper, and cilantro with lime dressing.",
+      "description": "Mango, avocado, red pepper, and cilantro with lime.",
       "price": 10,
       "rating": 8.5,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6u7lSLL8ThEH8ENSxa55S58rLAm_bjlxhNw&s"
     },
     {
       "id": "f2",
-      "title": "Avocado Salad",
+      "title": "Cobb Salad",
       "description": "Fresh avocado, greens, cherry tomatoes, and tangy lime.",
       "price": 10.5,
       "rating": 9.2,
@@ -119,7 +119,7 @@
     {
       "id": "p3",
       "title": "Pesto Penne",
-      "description": "Penne pasta tossed in homemade basil pesto with onion.",
+      "description": "Penne pasta tossed in homemade basil pesto.",
       "price": 10.3,
       "rating": 8.7,
       "img": "https://debraklein.com/wp-content/uploads//2021/06/Pesto-Pasta-Salad-12.jpg"
@@ -177,7 +177,7 @@
     {
       "id": "g4",
       "title": "Couscous Garden",
-      "description": "Couscous with roasted bell peppers, herbs, and cloves garlic.",
+      "description": "Couscous with roasted bell peppers, herbs, and garlic.",
       "price": 10.9,
       "rating": 9.0,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuC7g6uoH1b_BimkfYcCR9QmO9D0vU-Fgj8g&s"

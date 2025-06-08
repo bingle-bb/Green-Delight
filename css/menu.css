@@ -119,7 +119,7 @@ h1 {
   color: #2c3e50;
 }
 
-.plusBtn {
+.add-to-cart {
   background: #d6dc72;
   border: none;
   padding: 6px 12px;
@@ -129,7 +129,7 @@ h1 {
   transition: background 0.2s;
 }
 
-.plusBtn:hover {
+.add-to-cart:hover {
   background: #c8cf58;
   cursor: pointer;
 }

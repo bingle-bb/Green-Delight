@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shop</title>
+    <style>
+      .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+        width: 200px;
+      }
+      a.view-cart {
+        display: inline-block;
+        margin: 20px 0;
+        text-decoration: none;
+        background: #333;
+        color: #fff;
+        padding: 8px 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Products</h2>
+    <div class="product">
+      <h4>Apple</h4>
+      <p>$1</p>
+      <button onclick="addToCart('Apple', 1)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h4>Banana</h4>
+      <p>$0.5</p>
+      <button onclick="addToCart('Banana', 0.5)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h4>Orange</h4>
+      <p>$0.8</p>
+      <button onclick="addToCart('Orange', 0.8)">Add to Cart</button>
+    </div>
+
+    <a href="testCart.html" class="view-cart">View Cart</a>
+
+    <script>
+      function addToCart(itemName, price) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+        if (cart[itemName]) {
+          cart[itemName].qty += 1;
+        } else {
+          cart[itemName] = { price: price, qty: 1 };
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(itemName + " added to cart!");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cart</title>
+    <style>
+      .cart-item {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .remove-btn {
+        background: red;
+        color: white;
+        border: none;
+        padding: 4px 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p>
+      <strong>Total: $<span id="total">0</span></strong>
+    </p>
+    <a href="test.html">← Back to Shop</a>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+      function removeFromCart(itemName) {
+        if (cart[itemName]) {
+          cart[itemName].qty -= 1;
+          if (cart[itemName].qty <= 0) {
+            delete cart[itemName];
+          }
+          localStorage.setItem("cart", JSON.stringify(cart));
+          renderCart();
+        }
+      }
+
+      function renderCart() {
+        const cartItems = document.getElementById("cart-items");
+        cartItems.innerHTML = "";
+        let total = 0;
+
+        for (let item in cart) {
+          const { price, qty } = cart[item];
+          const itemTotal = price * qty;
+          total += itemTotal;
+
+          cartItems.innerHTML += `
+          <div class="cart-item">
+            ${item} x ${qty} = $${itemTotal.toFixed(2)}
+            <button class="remove-btn" onclick="removeFromCart('${item}')">Remove</button>
+          </div>`;
+        }
+
+        document.getElementById("total").innerText = total.toFixed(2);
+      }
+
+      renderCart();
+    </script>
+  </body>
+</html>
