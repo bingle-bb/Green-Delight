@@ -69,6 +69,7 @@
     <script src="../js/sectionFetch.js"></script>
     <script src="../js/menu.js"></script>
     <script src="../js/iconsToggle.js"></script>
+    <script src="../js/addtoCart.js"></script>
 
     <script>
       const tabs = document.querySelectorAll("#menuTabs .nav-link");
@@ -98,15 +99,15 @@
         });
       });
 
-      // Place your renderItems function here
-
       function renderItems(category) {
         menuItemsContainer.innerHTML = "";
+
         if (!menuData[category]) {
           menuItemsContainer.innerHTML = "<p>No items found.</p>";
           return;
         }
 
+        // Render all items
         menuData[category].forEach((item) => {
           menuItemsContainer.innerHTML += `
             <div class="col-md-4 col-sm-6 row d-flex justify-content-center mb-4">
@@ -123,27 +124,17 @@
             </div>
           `;
         });
-      }
 
-      // ✅ This is a global click handler (outside any function)
-      document.addEventListener("click", function (e) {
-        if (e.target.classList.contains("add-to-cart")) {
-          const name = e.target.dataset.name;
-          const price = parseFloat(e.target.dataset.price);
-          addToCart(name, price);
-        }
-      });
-
-      // ✅ Your cart logic
-      function addToCart(itemName, price) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || {};
-        if (cart[itemName]) {
-          cart[itemName].qty += 1;
-        } else {
-          cart[itemName] = { price: price, qty: 1 };
-        }
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert(`${itemName} added to cart!`);
+        // Attach listeners AFTER rendering
+        menuItemsContainer
+          .querySelectorAll(".add-to-cart")
+          .forEach((button) => {
+            button.addEventListener("click", () => {
+              const name = button.dataset.name;
+              const price = parseFloat(button.dataset.price);
+              addToCart(name, price);
+            });
+          });
       }
     </script>
 
