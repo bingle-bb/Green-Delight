@@ -9,14 +9,38 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      #scrollTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        border: none;
+        outline: none;
+        background-color: #4fac32bb;
+        color: #8b6f4d;
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 10px;
+      }
+
+      #scrollTopBtn:hover {
+        background-color: #4eac32;
+      }
+    </style>
   </head>
   <body>
-    <!-- nav -->
-    <div id="nav-container"></div>
-
     <!-- header section -->
     <section id="header"></section>
+
+    <!-- nav -->
+    <div id="nav-container"></div>
 
     <!-- topMenu section -->
     <section class="topMenu-container">
@@ -40,12 +64,17 @@
     <!-- scroll -->
     <div id="scrollBtnContainer"></div>
 
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+      <i style="font-size: 20px" class="fas">&#xf062;</i>
+    </button>
+
     <!-- script src -->
     <script src="../js/toggle.js"></script>
     <script src="../js/review-stars.js"></script>
     <script src="../js/sectionFetch.js"></script>
     <script src="../js/iconsToggle.js"></script>
     <script src="../js/addtoCart.js"></script>
+    <script src="../js/scrolltoTop.js"></script>
     <script>
       fetch("topMenu.json")
         .then((response) => response.json())

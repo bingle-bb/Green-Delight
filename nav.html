@@ -147,6 +147,10 @@
         background-color: #45a049;
       }
 
+      .formText {
+        font-weight: bold;
+      }
+
       .toggle-link {
         text-align: center;
         margin-top: 10px;
@@ -309,7 +313,10 @@
           <i class="fas fa-shopping-cart"></i>
           <div class="dropdown-box cart-dropdown" id="cartBox">
             <div id="cartItems">Your cart is empty.</div>
-            <h3>Total: $<span id="total">0</span></h3>
+            <h3>
+              <span id="total$" style="font-weight: bold">Total: $</span
+              ><span id="total" style="font-weight: bold">0</span>
+            </h3>
             <a href="menu.html" class="btn">Go to Menu</a>
           </div>
         </div>
@@ -320,7 +327,7 @@
           <div class="dropdown-box" id="userBox">
             <!-- Login Form -->
             <div class="login-form" id="loginForm">
-              <h4>Login</h4>
+              <h4 class="formText">Login</h4>
               <input type="text" placeholder="Username" />
               <input type="password" placeholder="Password" />
               <button id="loginBtn">Login</button>
@@ -331,7 +338,7 @@
 
             <!-- Signup Form -->
             <div class="signup-form" id="signupForm">
-              <h4>Sign Up</h4>
+              <h4 class="formText">Sign Up</h4>
               <input type="text" placeholder="Username" />
               <input type="email" placeholder="Email" />
               <input type="password" placeholder="Password" />

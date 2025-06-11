@@ -15,13 +15,33 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/menu.css" />
+
+    <style>
+      #scrollTopBtn {
+        display: none;
+        position: fixed !important;
+        bottom: 40px !important;
+        right: 30px !important;
+        border: none;
+        outline: none;
+        background-color: #4fac32bb;
+        color: #8b6f4d;
+        cursor: pointer;
+        padding: 12px !important;
+        border-radius: 10px;
+      }
+
+      #scrollTopBtn:hover {
+        background-color: #4eac32;
+      }
+    </style>
   </head>
   <body>
-    <!-- nav -->
-    <div id="nav-container"></div>
-
     <!-- header section -->
     <!-- <section id="header"></section> -->
+
+    <!-- nav -->
+    <div id="nav-container"></div>
 
     <section>
       <p class="menu-description">
@@ -64,12 +84,17 @@
     <!-- footer -->
     <div id="footer"></div>
 
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+      <i style="font-size: 20px" class="fas">&#xf062;</i>
+    </button>
+
     <script src="js/toggle.js"></script>
     <script src="../js/review-stars.js"></script>
     <script src="../js/sectionFetch.js"></script>
     <script src="../js/menu.js"></script>
     <script src="../js/iconsToggle.js"></script>
     <script src="../js/addtoCart.js"></script>
+    <script src="../js/scrolltoTop.js"></script>
 
     <script>
       const tabs = document.querySelectorAll("#menuTabs .nav-link");
