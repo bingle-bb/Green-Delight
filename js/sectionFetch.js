@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("nav-container").innerHTML = data;
-      initDropdowns(), toggle(); // Call after nav is injected
+      toggleNav();
+      initDropdowns();
+      // Call after nav is injected
     });
 
   fetch("header.html")
