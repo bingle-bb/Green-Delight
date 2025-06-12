@@ -87,16 +87,10 @@
           const fixedPassword = "admin123";
 
           const errorMsg = document.getElementById("error-msg");
-
-          if (
-            usernameInput === fixedUsername &&
-            passwordInput === fixedPassword
-          ) {
-            // Credentials match, redirect to admin dashboard
-            window.location.href = "admin/index.html";
+          if (username === fixedUsername && password === fixedPassword) {
+            window.location.href = "dashboard.html";
           } else {
-            // Show error message
-            errorMsg.style.display = "block";
+            document.getElementById("error-msg").style.display = "block";
           }
         });
     </script>
